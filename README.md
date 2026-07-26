@@ -24,6 +24,17 @@ Download the latest APK from the
 and sideload it on Android, or build it yourself — see the
 [app's README](./Scroll%20Mobile%20App/README.md).
 
+> **Heads up before installing.** The APK is **debug-signed** — built with
+> Android's default debug key rather than a private release key. Play Protect
+> will warn you ("Unsafe app blocked"); choose *More details → Install anyway*.
+> The warning is legitimate: a debug-signed build is unverified, so nothing
+> proves it came from me rather than someone who modified it. Only install a
+> copy downloaded from this repository's Releases page.
+>
+> It also can't be installed over, or upgraded by, a Play Store build —
+> signatures have to match to update in place. Android 7.0+ required. No iOS
+> build is distributed; build from source for that.
+
 ---
 
 ## Scroll (mobile)

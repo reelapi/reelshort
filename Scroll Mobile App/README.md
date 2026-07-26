@@ -22,11 +22,35 @@ built with Expo and React Native on top of the ReelShort API in this repository.
 [Releases page](https://github.com/surenjanath/reelshort_added_mobile/releases)
 and sideload it on Android.
 
-You'll need to allow installs from unknown sources. The APK is signed with a
-debug key — fine for sideloading, but Android will warn you, and it can't be
-installed over a Play Store build.
+1. Download `Scroll-v*.apk` to your phone.
+2. Open it. Android will ask you to allow installs from this source — that
+   setting is per-app, so you're granting it to your browser or file manager,
+   not to Scroll.
+3. Play Protect will show **"Unsafe app blocked"** or a similar warning. Choose
+   *More details → Install anyway*.
 
-**Want to build it yourself?** See [Running it](#running-it).
+### Before you install — please read
+
+- **The APK is debug-signed.** It's built with Android's default debug key, not
+  a private release key. That's why Play Protect warns about it. It means the
+  build is unverified: nothing proves it came from me rather than someone who
+  modified it. Only install a copy you downloaded from this repository's
+  Releases page.
+- **It can't upgrade a Play Store app**, and a future Play Store build couldn't
+  upgrade it either. Signatures must match to update in place, so switching
+  means uninstalling first and losing your list and watch progress.
+- **Upgrading between releases here works normally**, as long as each one is
+  debug-signed with the same key — which they are.
+- **Android only.** There's no iOS build: distributing one outside the App Store
+  needs a paid Apple Developer account. iOS users can build from source.
+- **Requires Android 7.0+** (API 24) and an internet connection. There's no
+  offline mode.
+- **It's a universal APK** — it carries native code for `arm64-v8a`,
+  `armeabi-v7a`, `x86`, and `x86_64`, so it runs on any device and emulator.
+  That's most of the ~74 MB; a per-ABI split would be roughly a quarter of it.
+
+**Want to build it yourself?** See [Running it](#running-it). Building from
+source is the way to get a copy signed with your own key.
 
 ---
 

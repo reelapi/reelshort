@@ -1,3 +1,70 @@
-node_modules
-dist
+# ---------------------------------------------------------------------------
+# Dependencies
+# ---------------------------------------------------------------------------
+node_modules/
+.pnp
+.pnp.js
+
+# ---------------------------------------------------------------------------
+# Build output
+# ---------------------------------------------------------------------------
+dist/
+build/
+web-build/
+*.tsbuildinfo
+
+# ---------------------------------------------------------------------------
+# Secrets and local config
+# ---------------------------------------------------------------------------
 .env
+.env.local
+.env.*.local
+!.env.example
+
+# Android signing material — never commit these.
+*.keystore
+!debug.keystore
+keystore.properties
+keystore-backup/
+*.jks
+local.properties
+
+# ---------------------------------------------------------------------------
+# Expo / React Native  (Scroll Mobile App)
+# ---------------------------------------------------------------------------
+.expo/
+.expo-shared/
+expo-env.d.ts
+
+# The native projects are generated from app.json by `npx expo prebuild`.
+# They're reproducible, large, and churn on every regeneration, so they stay
+# out of the repo. Run prebuild after cloning — see the app's README.
+android/
+ios/
+
+# Release artefacts are attached to GitHub Releases, not committed.
+*.apk
+*.aab
+*.ipa
+
+# Metro / bundler caches
+.metro-health-check*
+*.jsbundle
+
+# ---------------------------------------------------------------------------
+# Editors and OS
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# ---------------------------------------------------------------------------
+# Logs
+# ---------------------------------------------------------------------------
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
